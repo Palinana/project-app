@@ -1,3 +1,7 @@
+html{
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +10,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #2A2A2C; */
+  background-image: linear-gradient(to bottom , #212123, #6C6C6C );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+nav {
+  /* background-image: linear-gradient(to right , #B96F40, #70381E );
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background: #2A2A2C !important;
+  border-bottom: 1px solid #737272;
+}
+
+.white {
+  width: 60% !important;
+  background: #292929 !important;
+  box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+}
+
+form{
+  padding: 10px 50px;
+  margin: 90px auto;
+}
+
+form:last-child {
+  text-align: center;
+}
+
+form button, form h5{
+  margin: 20px 0;
+}
+
+.form-title {
+  color: white !important;
+}
+
+.btn-form {
+  /* background-color: #9C9C9C !important; */
+  background-image: linear-gradient(to right , #45AA9E, #25D18F );
+  color: #020202;
+}
+
+/* custom color for form input */
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #B96F40;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #45AA9E !important;
+}
+
+.btn-initals {
+  /* background-image: linear-gradient(to right , #435b6b, #213542 ); */
+  background-image: linear-gradient(to right , #45AA9E, #25D18F );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-sum {
+  background: #292929 !important;
+  border-radius: none;
+  /* box-shadow: 0 2rem 6rem rgba(0,0,0,.3); */
+}
+
+.project-list {
+  margin: 40px 0 20px 0;
+}
+
+.notifications {
+  margin: 40px 0 20px 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
