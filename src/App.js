@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import Sidebar from './components/layout/SideBar';
 import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
 import SignIn from './components/auth/SignIn';
@@ -12,7 +13,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="App">
-                    <Navbar/>
+                    <Navbar />
                     <Switch>
                         <Route exact path="/" component={Dashboard}></Route>
                         <Route exact path="/project/:id" component={ProjectDetails}></Route>

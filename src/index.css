@@ -9,7 +9,6 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #1D1B1D; */
   background-color: #131111;
   min-height: 100%;
 }
@@ -20,7 +19,6 @@ code {
 }
 
 nav {
-  /* background: #414141 !important; */
   background: #131111 !important;
   border-bottom: 1px solid #737272;
 }
@@ -53,7 +51,6 @@ input, textarea{
 }
 
 .btn-form {
-  /* background-color: #9C9C9C !important; */
   background-image: linear-gradient(to right , #45AA9E, #25D18F );
   color: white;
   height: 40px;    
@@ -81,6 +78,8 @@ input, textarea{
 
 .project-list {
   margin: 40px 0 20px 0;
+  max-height: 600px;
+  overflow-y: scroll;
 }
 
 .notifications {
@@ -96,3 +95,69 @@ input, textarea{
 .nav-link:hover {
   color: #45AA9E;
 }
+
+.card-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.project-date {
+  color: #5a5a5a !important;
+}
+
+.project-details {
+  margin-top: 40px !important;
+}
+
+.side-drawer {
+  background-color: #25D18F !important;
+  min-height: 100%;
+  max-width: 60%;
+  z-index: 10 !important;
+  position: fixed;
+}
+
+.btn-close {
+  padding: 10px;
+}
+
+ul:not(.browser-default) {
+  padding-left: 50px !important;
+}
+
+.side-links{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+}
+
+/* media queries*/
+
+@media only screen and (max-width: 992px) {
+  .btn-initals-sidebar {
+    width: 80px;
+    height: 80px;
+    padding: 20px 10px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #292929;
+  }
+
+  .side-links > :first-child{
+    margin-bottom: 20px !important;
+  }
+
+  .white {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .white {
+    width: 100% !important;
+  }
+}
+
+
+
