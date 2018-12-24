@@ -25,7 +25,7 @@ class Navbar extends Component{
     return (
         <nav className="nav-wrapper">
             <div className="container">
-                <Link to="/" className="brand-logo">ProjectApp</Link>
+                <Link to="/" className="brand-logo logo">rocket</Link>
                 <a className="sidenav-trigger"  data-target="slide-out" onClick={this.toggleClick}>
                     <i className="material-icons">menu</i>
                 </a>

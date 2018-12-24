@@ -18,10 +18,34 @@ code {
     monospace;
 }
 
+/* ===============
+    navigation
+================ */
+
 nav {
   background: #131111 !important;
   border-bottom: 1px solid #737272;
 }
+
+.nav-link:hover {
+  color: #45AA9E;
+}
+
+.logo {
+  font-size: 1.3rem !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-initals {
+  background-image: linear-gradient(to right , #45AA9E, #25D18F );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ========
+    form
+========== */
 
 .white {
   width: 60% !important;
@@ -64,12 +88,13 @@ input, textarea{
   transform: scale(.95)
 }
 
-
-.btn-initals {
-  background-image: linear-gradient(to right , #45AA9E, #25D18F );
-  background-size: cover;
-  background-repeat: no-repeat;
+.user-error {
+  margin-top: 2px;
 }
+
+/* ===========
+    project
+============ */
 
 .project-sum {
   background: #292929 !important;
@@ -82,17 +107,15 @@ input, textarea{
   overflow-y: scroll;
 }
 
-.notifications {
-  margin: 40px 0 20px 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.project-date {
+  color: #5a5a5a !important;
 }
 
-.user-error {
-  margin-top: 2px;
+.project-details {
+  margin-top: 40px !important;
 }
 
-.nav-link:hover {
+.project-title {
   color: #45AA9E;
 }
 
@@ -101,13 +124,40 @@ input, textarea{
   font-weight: 600 !important;
 }
 
-.project-date {
+/* ================
+    notifications
+================= */
+
+.notifications {
+  margin: 40px 0 20px 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.notifications {
+  background: #292929 !important;
+  margin: 48px 0 20px 0;
+}
+
+.notifications__content {
+  padding: 10px 25px !important;
+}
+
+.notifications__content ul:not(.browser-default) {
+  padding-left: 0px !important;
+}
+
+.online-user__name {
+  color: #45AA9E;
+}
+
+.note-date {
   color: #5a5a5a !important;
 }
 
-.project-details {
-  margin-top: 40px !important;
-}
+/* ===========
+    sidebar
+============ */
 
 .side-drawer {
   background-color: #25D18F !important;
@@ -132,7 +182,9 @@ ul:not(.browser-default) {
   padding: 50px;
 }
 
-/* media queries*/
+/* ================
+    media queries
+================== */
 
 @media only screen and (max-width: 992px) {
   .btn-initals-sidebar {

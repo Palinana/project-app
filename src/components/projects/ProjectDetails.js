@@ -14,7 +14,7 @@ const ProjectDetails = (props) => {
             <div className="container section project-details">
                 <div className="card z-depth-0 project-sum">
                     <div className="card-content grey-text text-darken-3">
-                        <span className="card-title white-text">Project title - {project.title}</span>
+                        <span className="card-title project-title">{project.title}</span>
                         <p className="white-text">{project.content}</p>
                     </div>
                     <div className="card-action">
