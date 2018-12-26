@@ -92,6 +92,20 @@ input, textarea{
   margin-top: 2px;
 }
 
+
+/* ============
+    edit form
+============= */
+
+.edit-form {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.edit-form .input-field {
+  margin: 0 !important;
+}
+
 /* ===========
     project
 ============ */
@@ -124,6 +138,16 @@ input, textarea{
   font-weight: 600 !important;
 }
 
+.edit {
+  font-size: 20px;
+  color: white !important;
+  cursor: pointer;
+}
+
+.delete {
+  color: white !important;
+  cursor: pointer;
+}
 /* ================
     notifications
 ================= */

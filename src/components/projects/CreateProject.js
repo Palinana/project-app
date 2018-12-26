@@ -8,16 +8,19 @@ class CreateProject extends Component {
         title: '',
         content: ''
     }
+
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
     }
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.createProject(this.state);
         this.props.history.push('/');
     }
+    
     render() {
         const { auth } = this.props;
         if (!auth.uid) return <Redirect to='/sign-in' /> 

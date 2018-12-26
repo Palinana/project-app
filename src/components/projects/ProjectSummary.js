@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 
-const ProjectSummary = ({project}) => {
+
+const ProjectSummary = ({project, deleteProject}) => {
     return (
         <div className="card z-depth-0 project-summary project-sum">
             <div className="card-content grey-text text-darken-3">

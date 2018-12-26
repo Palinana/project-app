@@ -22,6 +22,34 @@ exports.projectCreated = functions.firestore  //the trigger
         return createNotification(notification)
 });
 
+exports.projectDeleted= functions.firestore  //the trigger
+    .document('projects/{projectId}')   //when a new project is created in this collection, run the callback
+    .onDelete(doc => {
+
+        const project = doc.data();
+        const notification = {
+            content: 'Deleted a project',
+            user: `${project.authorFirstName} ${project.authorLastName}`,
+            time: admin.firestore.FieldValue.serverTimestamp()
+        }
+
+        return createNotification(notification)
+});
+
+exports.projectUpdated= functions.firestore  //the trigger
+    .document('projects/{projectId}')   //when a new project is created in this collection, run the callback
+    .onUpdate(doc => {
+
+        const project = doc.after.data();
+        const notification = {
+            content: 'Updated a project',
+            user: `${project.authorFirstName} ${project.authorLastName}`,
+            time: admin.firestore.FieldValue.serverTimestamp()
+        }
+
+        return createNotification(notification)
+});
+
 exports.userJoined = functions.auth.user()
     .onCreate(user => {
         
