@@ -3,7 +3,6 @@
 Rocket is a project management application with authentication and cloud functions that helps users to track projects.
 
 # Features
-
 - A user is able to create an account and add a project.
 - A user is able to edit/delete only the project he created.
 - All projects appear on the dashboard in time order.
