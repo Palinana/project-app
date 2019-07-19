@@ -10,6 +10,8 @@ export const createProject = (project) => {
             authorFirstName: profile.firstName,
             authorLastName: profile.lastName,
             authorId: authorId,
+
+            authorColor: profile.color,
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_PROJECT', project });

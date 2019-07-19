@@ -9,7 +9,7 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #131111;
+  background-color: #EDEEF2;
   min-height: 100%;
 }
 
@@ -23,12 +23,17 @@ code {
 ================ */
 
 nav {
-  background: #131111 !important;
-  border-bottom: 1px solid #737272;
+  background: #EDEEF2 !important;
+  border-bottom: none;
+  box-shadow: none !important;
+}
+
+.nav-link {
+  color: #5B5C60;
 }
 
 .nav-link:hover {
-  color: #45AA9E;
+  color: #F05457;
 }
 
 .logo {
@@ -37,10 +42,16 @@ nav {
   text-transform: uppercase;
 }
 
+nav .brand-logo {
+  color: #5B5C60;
+}
+
 .btn-initals {
-  background-image: linear-gradient(to right , #45AA9E, #25D18F );
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #F05457;
+}
+
+.btn-initals:hover, .btn-initals:focus {
+  background: #ef8385;
 }
 
 /* ========
@@ -48,13 +59,13 @@ nav {
 ========== */
 
 .white {
-  width: 60% !important;
-  background: #262526 !important;
-  box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+  width: 45% !important;
+  background: #F6F6F6 !important;
+  box-shadow: 0 2rem 6rem rgba(191, 190, 190, 0.3);
 }
 
 form{
-  padding: 10px 50px;
+  padding: 20px 70px;
   margin: 90px auto;
 }
 
@@ -66,32 +77,63 @@ form button, form h5{
   margin: 20px 0;
 }
 
+.form-logo__box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #f7dddd;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form-logo {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50px;
+}
+
 .form-title {
-  color: white !important;
+  color: #5B5C60 !important;
 }
 
 input, textarea{
-  color: white;
+  color: #5B5C60;
 }
 
-.btn-form {
-  background-image: linear-gradient(to right , #45AA9E, #25D18F );
+.input-field input[type=text] + label, 
+.materialize-textarea:focus:not([readonly]) + label {
+  color: #F05457 !important;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus,  
+.input-field input[type=email]:focus,
+.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #F05457 !important;
+  box-shadow: 0 1px 0 0 #F05457 !important;
+}
+
+.btn-form, .btn-form:focus {
+  background: #F05457;
   color: white;
-  height: 40px;    
-  width: 130px;
-  border-radius: 40px;
+  height: 45px;    
+  width: 100%;
   letter-spacing: 1px;
   transition: .3s ease-in-out
 }
 
 .btn-form:hover {
-  transform: scale(.95)
+  transform: scale(.95);
+  background: #ef8385;
 }
 
 .user-error {
   margin-top: 2px;
 }
-
 
 /* ============
     edit form
@@ -106,12 +148,20 @@ input, textarea{
   margin: 0 !important;
 }
 
+.edit-form .input-field input{
+  color: #5B5C60;
+}
+
+.edit-form .input-field textarea{
+  color: #5a5a5a;
+}
+
 /* ===========
     project
 ============ */
 
 .project-sum {
-  background: #292929 !important;
+  background: #F7F7F7 !important;
   border-radius: none;
 }
 
@@ -121,8 +171,13 @@ input, textarea{
   overflow-y: scroll;
 }
 
-.project-date {
+.project-date, .project-summary__title {
   color: #5a5a5a !important;
+}
+
+.project-summary__title {
+  border-bottom: 1px solid rgba(160,160,160,0.2);
+  padding-bottom: 24px;
 }
 
 .project-details {
@@ -130,24 +185,35 @@ input, textarea{
 }
 
 .project-title {
-  color: #45AA9E;
+  color: #F05457;
 }
 
 .card-title {
   font-size: 15px !important;
   font-weight: 600 !important;
+  color: #5B5C60 !important;
+}
+
+#project-content {
+  padding: 24px 24px 0 24px !important;
+}
+
+.card .card-action {
+  border: none;
 }
 
 .edit {
   font-size: 20px;
-  color: white !important;
+  color: #5B5C60 !important;
   cursor: pointer;
 }
 
 .delete {
-  color: white !important;
+  color: #5B5C60 !important;
   cursor: pointer;
 }
+
+
 /* ================
     notifications
 ================= */
@@ -159,7 +225,7 @@ input, textarea{
 }
 
 .notifications {
-  background: #292929 !important;
+  background: #F7F7F7 !important;
   margin: 48px 0 20px 0;
 }
 
@@ -172,7 +238,7 @@ input, textarea{
 }
 
 .online-user__name {
-  color: #45AA9E;
+  color: #F05457;
 }
 
 .note-date {
@@ -184,7 +250,7 @@ input, textarea{
 ============ */
 
 .side-drawer {
-  background-color: #25D18F !important;
+  background-color: #F05457 !important;
   min-height: 100%;
   max-width: 60%;
   z-index: 10 !important;

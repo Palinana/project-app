@@ -3,6 +3,8 @@ import moment from 'moment';
 
 const Notifications = (props) => {
     const { notifications } = props;
+    console.log('notifications ', notifications)
+
     return (
         <div className="section">
             <div className="card z-depth-0 notifications">
