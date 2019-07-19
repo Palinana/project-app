@@ -54,7 +54,7 @@ class ProjectDetails extends Component {
                 <div className="container section project-details">
                     <div className="card z-depth-0 project-sum">
                         { !edit ? 
-                            <div className="card-content grey-text text-darken-3">
+                            <div className="card-content grey-text text-darken-3" id="project-content">
                                 { project.authorId === auth.uid ? 
                                     <span className="card-title project-title">
                                         {project.title}
@@ -63,10 +63,10 @@ class ProjectDetails extends Component {
                                     </span> :
                                     <span className="card-title project-title">{project.title}</span>
                                 }
-                                <p className="white-text">{project.content}</p>
+                                <p className="project-summary__title">{project.content}</p>
                             </div> : 
 
-                            <div className="card-content grey-text text-darken-3">
+                            <div className="card-content grey-text text-darken-3" >
                                 <form className="edit-form" onSubmit={this.handleSubmit}>
                                     <div className="input-field">
                                         <input type="text" id='title' onChange={this.handleChange} defaultValue={this.state.title} required/>

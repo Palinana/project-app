@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
 import { Redirect } from 'react-router-dom';
+import logo from '../../rocket.png';
 
 class SignIn extends Component {
     state = {
@@ -27,7 +28,10 @@ class SignIn extends Component {
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="form-title">Sign In</h5>
+                    <div className="form-logo__box">
+                        <img className="form-logo" src={logo}/>
+                    </div>
+                    <h5 className="form-title">Login</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="email" id='email' onChange={this.handleChange} />
